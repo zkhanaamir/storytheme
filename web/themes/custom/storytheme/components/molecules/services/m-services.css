@@ -1,0 +1,64 @@
+.m-services {
+  &__summary {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-services-marker {
+      display: none;
+    }
+  }
+
+  &__summary-span {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: var(--color-text-stroke-primary);
+
+    @db xsl{
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__summary-text {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    @db xsl{
+      text-align: left;
+    }
+    .m-services[open] & {
+      font-weight: var(--font-weight-700);
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+
+    &--add {
+      .m-services[open] & {
+        display: none;
+      }
+    }
+
+    &--remove {
+      .m-services:not([open]) & {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    margin-top: 0.75rem;
+    border-top: 1px solid lightgray;
+    padding-top: 0.5rem;
+
+    .m-services[open] & {
+      transition: all 0.35s linear;
+    }
+  }
+}

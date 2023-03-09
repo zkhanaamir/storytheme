@@ -1,0 +1,25 @@
+.m-services-list {
+  padding: 70px 140px;
+  background-color: #ececec;
+
+  @db xsl{
+    padding: 50px 20px;
+  }
+
+  .u-background-color-secondary & {
+    background-color: var(--color-background-primary);
+  }
+
+  &__items {
+    display: grid;
+    gap: 8px;
+
+    @db l {
+      gap: 8px;
+    }
+  }
+  &__item{
+    background: #fff;
+    padding: 15px;
+  }
+}

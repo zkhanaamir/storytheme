@@ -1,0 +1,25 @@
+<div {{ attributes }}>
+  <div class="m-service-top__container">
+    {% if content.title|render or content.text|render %}
+    <div class="m-service-top__left">
+      {% if content.title|render %}
+      <div class="m-service-top__title-container">
+        {{ content.title }}
+      </div>
+      {% endif %}
+      {% if content.text|render %}
+      <div class="m-service-top__text-container">
+        {{ content.text }}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="m-service-top__right">
+      {% if content.image|render %}
+      <div class="m-service-top__image-container">
+        {{ content.image }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

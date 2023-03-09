@@ -1,0 +1,24 @@
+.m-footer-logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+  }
+
+  &__image {
+    max-width: 100%;
+
+    .m-logo__link:not(:last-child) & {
+      width: 76px;
+
+      @db l {
+        width: 10rem;
+      }
+    }
+
+    .m-logo__link:last-child & {
+      width: 160px;
+    }
+  }
+}

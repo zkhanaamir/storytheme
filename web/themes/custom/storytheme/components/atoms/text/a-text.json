@@ -1,0 +1,42 @@
+{
+  "content": {
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  },
+  "variables": {
+    "modifiers": [
+      "header-1",
+      "header-2",
+      "header-3",
+      "header-4",
+      "header-5-bold",
+      "header-5-light",
+      "website-title",
+      "reference-brands",
+      "cta-label",
+      "filter-label",
+      "filter-checkbox-label",
+      "header-navigation",
+      "footer-navigation",
+      "body-1-regular",
+      "body-1-bold",
+      "body-2-light",
+      "body-2-regular",
+      "body-2-bold",
+      "body-3-regular",
+      "body-3-bold",
+      "link-text"
+    ],
+    "tag": [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "div",
+      "p",
+      "span",
+      "a"
+    ]
+  }
+}

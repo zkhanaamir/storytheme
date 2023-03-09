@@ -1,0 +1,39 @@
+{
+  "content": {
+    "content": "Lorem ipsum"
+  },
+  "variables": {
+    "modifiers": [
+      "default",
+      "second",
+      "third",
+      "fourth"
+    ],
+    "tag": [
+      "button",
+      "a",
+      "div",
+      "span"
+    ],
+    "iconBefore": [
+      "none",
+      "expand-less",
+      "chevron-left",
+      "phone",
+      "mail",
+      "download",
+      "visibility"
+    ],
+    "iconAfter": [
+      "none",
+      "expand-less",
+      "chevron-right",
+      "download",
+      "close"
+    ],
+    "iconSize": [
+      "default",
+      "bigger"
+    ]
+  }
+}

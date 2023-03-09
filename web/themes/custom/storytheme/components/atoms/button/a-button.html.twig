@@ -1,0 +1,22 @@
+<{{ tag }}{{ attributes }}>
+  {% if (not iconBefore and not iconAfter and isAjax) or (iconBefore and iconAfter and isAjax) %}
+    <span class="a-button__ajax a-button__ajax--full"></span>
+  {% endif %}
+  {% if iconBefore %}
+    {% if not iconAfter and isAjax %}
+      <span class="a-button__ajax a-button__ajax--start"></span>
+    {% endif %}
+    <svg class="a-button__icon a-button__icon--start" aria-hidden="true">
+      <use xlink:href="{{ storythemeSvgSpritePath }}#svg-{{ iconBefore }}"></use>
+    </svg>
+  {% endif %}
+  <span class="a-button__text">{{- content -}}</span>
+  {% if iconAfter %}
+    {% if not iconBefore and isAjax %}
+      <span class="a-button__ajax a-button__ajax--end"></span>
+    {% endif %}
+    <svg class="a-button__icon a-button__icon--end" aria-hidden="true">
+      <use xlink:href="{{ storythemeSvgSpritePath }}#svg-{{ iconAfter }}"></use>
+    </svg>
+  {% endif %}
+</{{ tag }}>

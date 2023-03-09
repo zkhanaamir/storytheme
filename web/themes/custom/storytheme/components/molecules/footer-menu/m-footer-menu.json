@@ -1,0 +1,23 @@
+{
+  "content": {
+    "title": "lorem ipsum"
+  },
+  "defaultContent": {
+    "links": [
+      "Featured Solutions",
+      "Composite materials",
+      "Protective Systems",
+      "Featured Solutions"
+    ]
+  },
+  "variables": {
+    "iconBefore": [
+      "none",
+      "chevron-left"
+    ],
+    "iconAfter": [
+      "none",
+      "chevron-right"
+    ]
+  }
+}

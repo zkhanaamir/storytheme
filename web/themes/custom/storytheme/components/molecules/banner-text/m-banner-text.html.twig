@@ -1,0 +1,11 @@
+<div {{ attributes }}>
+  <div class="m-banner-text__container">
+    {% if content.text|render %}
+      {{ content.text }}
+    {% endif %}
+    {% if content.link|render %}
+      {{ content.link }}
+    {% endif %}
+  </div>
+</div>
+

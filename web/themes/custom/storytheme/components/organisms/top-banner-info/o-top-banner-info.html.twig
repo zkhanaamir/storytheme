@@ -1,0 +1,14 @@
+<div {{ attributes }}>
+  <div class="o-top-banner-info_container">
+    {% if content.bannerText|render %}
+      <div class="o-top-banner-info__content">
+        {{ content.bannerText }}
+      </div>
+    {% endif %}
+    {% if content.bannerLinks|render %}
+      <div class="o-top-banner-info__content">
+        {{ content.bannerLinks }}
+      </div>
+    {% endif %}
+  </div>
+</div>

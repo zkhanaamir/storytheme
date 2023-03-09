@@ -1,0 +1,24 @@
+<div {{ attributes }}>
+  {% if content.title|render or content.subtitle %}
+    <div class="o-webforms__title">
+      {{ content.title }}
+    </div>
+    <div class="o-webforms__subtitle">
+      {{ content.subtitle }}
+    </div>
+  {% endif %}
+  <div class="o-webforms__content">
+    {% if content.infos|render %}
+      <div class="o-webforms__start">
+        {% if content.infos|render %}
+          {{ content.infos }}
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="o-webforms__end">
+      {% if content.forms|render %}
+        {{ content.forms }}
+      {% endif %}
+    </div>
+  </div>
+</div>

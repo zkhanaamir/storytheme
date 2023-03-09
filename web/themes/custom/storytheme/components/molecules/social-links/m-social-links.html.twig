@@ -1,0 +1,25 @@
+<div {{ attributes }}>
+  {% if content.title|render %}
+    <div class="m-social-links__title">
+      {{ content.title }}
+    </div>
+  {% endif %}
+  {% if content.items|render %}
+    <ul class="m-social-links__list">
+      {% for item in content.items %}
+        <li class="m-social-links__item">
+          <div class="m-social-links__link-container">
+            <a class="m-social-links__link" href="#">
+              {{ item.content|capitalize }}
+            </a>
+          </div>
+          <div class="m-social-links__icon-container">
+            <svg class="m-social-links__icon" aria-hidden="true">
+              <use xlink:href="{{ storythemeSvgSpritePath }}#svg-{{ item.content }}"></use>
+            </svg>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

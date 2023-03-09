@@ -1,0 +1,39 @@
+/* Functional colors */
+
+:root {
+  /* static color for overall website from figma*/
+    --color-transparent: transparent;
+    --color-text-stroke-primary: hsl(224, 45%, 15%);
+    --color-text-stroke-secondary: hsl(224, 22%, 30%);
+    --color-text-stroke-tertiary: hsl(240, 3%, 64%);
+    --color-text-stroke-light: hsl(0, 0%, 100%);
+    --color-text-stroke-strokes: hsl(198, 25%, 82%);
+    --color-background-primary: hsl(0, 0%, 100%);
+    --color-secondary-saint-gobain-blue: hsl(210, 100%, 27%);
+    --color-secondary-error: hsl(351, 82%, 44%);
+    --color-secondary-warning: hsl(17, 80%, 50%);
+    --color-secondary-information: hsl(199, 86%, 45%);
+    --color-secondary-success: hsl(118, 28%, 56%);
+    --color-ghost-saint-gobain-blue: hsl(210, 37%, 93%);
+    --color-ghost-error: hsl(351, 66%, 94%);
+    --color-ghost-warning: hsl(18, 77%, 95%);
+    --color-ghost-information: hsl(198, 71%, 95%);
+    --color-ghost-success: hsl(111, 30%, 95%);
+    --color-gradient-transparent-blurred-gradient-1: hsla(0, 0%, 0%, 0.8);
+    --color-gradient-transparent-blurred-gradient-2: var(--color-transparent);
+    --color-gradient-transparent-blurred-gradient: linear-gradient(0deg, var(--color-gradient-transparent-blurred-gradient-1) 0%, var(--color-gradient-transparent-blurred-gradient-2) 100%);
+    --color-gradient-transparent-dark-layer: hsla(0, 0%, 0%, 0.6);
+    --color-gradient-transparent-fading-lines-2: var(--color-transparent);
+    --color-gradient-transparent-fading-lines: linear-gradient(90deg, var(--color-gradient-transparent-fading-lines-1) 0%, var(--color-gradient-transparent-fading-lines-2) 100%);
+  
+
+  --color-background-secondary:#eef3fc;
+  --color-primary-primary: #00448a;
+  --color-primary-dark-primary: #002b57;
+  --color-primary-ghost-primary: #e5ecf3;
+  --color-secondary-footer: #000f1f;
+  --color-secondary-pinned-location: #e5531a;
+  --color-gradient-transparent-fading-lines-1: #e55311;
+  --color-secondary-icons: #3d465e;
+  
+}

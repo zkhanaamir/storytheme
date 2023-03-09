@@ -1,0 +1,19 @@
+<div {{ attributes }}>
+  <div class="m-key-info-with-icon__content">
+    {% if content.icon|render %}
+      {{ content.icon }}
+    {% endif %}
+    {% if content.heading|render %}
+      <div class="m-key-info-with-icon__text-content">
+        {% if content.heading|render %}
+          <div class="m-key-info-with-icon__heading">
+            {{ content.heading }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if content.arrowIcon|render %}
+      {{ content.arrowIcon }}
+    {% endif %}
+  </div>
+</div>

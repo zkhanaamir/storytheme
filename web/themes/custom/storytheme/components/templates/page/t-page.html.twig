@@ -1,0 +1,20 @@
+<div {{ attributes }}>
+  <div class="t-page__container">
+    <div class="t-page__above-header">
+      <div class="t-page__skip-link-container">
+        {{ content.skipLink }}
+      </div>
+    </div>
+    <div class="t-page__header">
+      {{ content.header }}
+    </div>
+    <div class="t-page__below-header">
+      <main id="main-content" class="t-page__content" role="main">
+        {{ content.content }}
+      </main>
+      <div class="t-page__footer">
+        {{ content.footer }}
+      </div>
+    </div>
+  </div>
+</div>

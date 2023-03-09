@@ -1,0 +1,16 @@
+{
+  "defaultContent": {
+    "content": "Lorem Ipsum"
+  },
+  "types": [
+    "text",
+    "email",
+    "search",
+    "password",
+    "number",
+    "textarea",
+    "select",
+    "tel",
+    "autocomplete"
+  ]
+}

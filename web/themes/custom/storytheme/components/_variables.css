@@ -1,0 +1,99 @@
+:root {
+  --root-font-size-default: 100%;
+  --root-font-size-xs: 4.267vw;
+  --root-font-size-l: 1.111vw;
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-family-ubuntu: "Ubuntu", sans-serif;
+  --font-family-source-sans-3: "Source Sans 3", sans-serif;
+  --font-size-40: 40px;
+  --font-size-29: 29px;
+  --font-size-25: 25px;
+  --font-size-22: 22px;
+  --font-size-20: 20px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+  --font-size-12: 12px;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --line-height-1-83: 1.83;
+  --line-height-1-71: 1.71;
+  --line-height-1-66: 1.66;
+  --line-height-1-5: 1.5;
+  --line-height-1-44: 1.44;
+  --line-height-1-4: 1.4;
+  --line-height-1-33: 1.33;
+  --line-height-1-31: 1.31;
+  --line-height-1-25: 1.25;
+  --line-height-1: 1;
+  --line-height-0-88: 0.88;
+  --letter-spacing-0-1: 0.1em;
+  --letter-spacing-0-05: 0.05em;
+  --letter-spacing-0-03: 0.03em;
+  --letter-spacing-0-02: 0.02em;
+  --letter-spacing-0: 0;
+  --transition-duration-0-2: 0.2s;
+  --transition-duration-0-25: 0.25s;
+  --transition-duration-0-35: 0.35s;
+  --transition-duration-1: 1s;
+  --transition-timing-function-cubic-bezier: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-timing-function-ease: ease;
+
+  /* z-index */
+  --z-index-anchors: 200;
+  --z-index-header-overlay: 250;
+  --z-index-header: 401;
+  --z-index-header-shadow: 450;
+  --z-index-header-dropdown: 400;
+  --z-index-dropdown: 401;
+  --z-index-sub-section-dropdown: 405;
+  --z-index-header-navigation-bottom-shadow: 410;
+  --z-index-filters-dropdown: 480;
+  --z-index-filters-overlay: 470;
+  --z-index-autocomplete: 100;
+  --z-index-dialog: 1001;
+  --z-index-language-switcher: 490;
+  --z-index-language-switcher-button: 495;
+
+  /* Focus outline */
+  --outline-color: var(--color-primary-primary);
+  --outline-size: 3px;
+  --outline-offset: 3px;
+
+  /* opacity */
+  --opacity-70: 0.7;
+
+  /* border */
+  --border-radius-50: 50%;
+  --border-radius-6: 6px;
+  --border-radius-4: 4px;
+  --border-radius-2: 2px;
+
+  /* header */
+  --o-header-height: 75px;
+  --o-header-height-collapsed: 68px;
+  --o-header-navigation-height: 100%;
+  /* stylelint-disable-next-line length-zero-no-unit */
+  --toolbar-height: 0rem;
+
+  /* anchors */
+  --m-anchors-height: 50px;
+
+  /* shadow */
+  --box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+
+  /* Layout system */
+  --layout-horizontal-gap: 16px;
+  --layout-header-start-gap: 16px;
+  --layout-header-end-gap: var(--layout-header-start-gap);
+
+  @media only screen and (min-width: 1025px) {
+    --layout-horizontal-gap: 150px;
+    --layout-header-start-gap: 40px;
+    --layout-header-end-gap: var(--layout-horizontal-gap);
+    --o-header-height: 80px;
+  }
+}

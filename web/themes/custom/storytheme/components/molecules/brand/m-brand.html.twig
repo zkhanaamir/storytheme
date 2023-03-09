@@ -1,0 +1,17 @@
+<div {{ attributes }}>
+  {% if content.label|render %}
+    <div class="m-brand__label">
+      {{ content.label }}
+    </div>
+  {% endif %}
+  {% if content.text|render %}
+    <div class="m-brand__text">
+      {{ content.text }}
+    </div>
+  {% endif %}
+  {% if content.read|render %}
+    <div class="m-brand__read">
+      {{ content.read }}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Hooks implementation of storytheme.
+ */
+
+/**
+ * Returns path to svg sprite.
+ */
+function _storytheme_get_svg_sprite_path() {
+  return base_path() . \Drupal::theme()->getActiveTheme()->getPath() . '/dist/assets/sprite.svg';
+}
+
+/**
+ * Hook_page_attachments().
+ *
+ * Prepares storythemeSvgSpritePath variable to get
+ * full path to svg sprite from js.
+ */
+function storytheme_page_attachments_alter(array &$attachments) {
+  $attachments['#attached']['drupalSettings']['storythemeSvgSpritePath'] = _storytheme_get_svg_sprite_path();
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1.0, user-scalable=no',
+      ],
+    ],
+    'viewport',
+  ];
+}
+
+/**
+ * Hook_preprocess().
+ *
+ * Prepares storythemeSvgSpritePath variable to get
+ * full path to svg sprite from twig.
+ */
+function storytheme_preprocess(&$variables, $hook) {
+  $variables['storythemeSvgSpritePath'] = _storytheme_get_svg_sprite_path();
+}
+
+
+
+function storytheme_preprocess_menu(array &$vars) {
+   if ($vars['menu_name'] == 'menu--extras--latest-posts') {
+    foreach ($vars['items'] as $idx => $item) {
+      $menuEntity = $item['entity'];
+      $myField = $menuEntity->get('field_lp_date');
+      $vars['items'][$idx]['attributes']['class'] = 'my-class';
+    }
+   }
+  }

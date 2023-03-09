@@ -1,0 +1,17 @@
+.m-banner-text {
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0079C1;
+    padding: 10px;
+    color: #fff;
+
+    @db xsl{
+      flex-wrap: wrap;
+    }
+  }
+  &__text{
+    margin-right: 5px;
+  }
+}

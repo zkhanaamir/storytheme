@@ -1,0 +1,43 @@
+.m-service-top {
+  &__container{
+    display: flex;
+    align-items: center;
+
+    @db xsl{
+      flex-wrap:wrap;
+    }
+  }
+  &__left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    @db xsl{
+      width: 100%;
+    }
+  }
+  &__right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @db xsl{
+      margin-top:20px;
+      width: 100%;
+    }
+  }
+  &__text-container{
+    width: 65%;
+    text-align: center;
+    margin-top: 15px;
+    @db xsl{
+      width: 100%;
+    }
+
+    p{
+      line-height: 25px;
+      text-transform: capitalize;
+    }
+  }
+}

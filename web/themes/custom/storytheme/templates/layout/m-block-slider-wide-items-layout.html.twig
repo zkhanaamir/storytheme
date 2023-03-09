@@ -1,0 +1,18 @@
+{#
+    /**
+     * @file
+     * Default theme implementation to display o-block-slider-wide layout.
+     *
+     * Available variables:
+     * - content: The content for this layout.
+     * - attributes: HTML attributes for the layout wrapper.
+     *
+     * @ingroup themeable
+     */
+    #}
+    {{ attach_library('storytheme/o-block-slider-wide') }}
+
+    {% include 'themes/custom/storytheme/components/molecules/block-slider-wide-items/m-block-slider-wide-items.html.twig' with {
+      attributes: attributes.addClass('m-block-slider-wide-items'),
+    } %}
+    

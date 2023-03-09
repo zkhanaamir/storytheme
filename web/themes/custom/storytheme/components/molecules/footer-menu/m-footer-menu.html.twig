@@ -1,0 +1,24 @@
+<div {{ attributes }} class="m-footer-menu m-footer-menu--links">
+  <nav class="m-footer-menu__nav">
+    {% if content.title|render %}
+      <div class="m-footer-menu__title">
+        {{ content.title|capitalize }}
+      </div>
+    {% endif %}
+    <ul class="m-footer-menu__list">
+      {% for item in items %}
+        <li class="m-footer-menu__item">
+          {{ item }}
+          {% if content.text|render %}
+            {{ content.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      {% if content.footerLogo|render %}
+        <div class="footer-logo">
+          {{ content.footerLogo }}
+        </div>
+      {% endif %}
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,32 @@
+.m-footer-menu {
+  &__title-container{
+    margin-bottom: 1rem;
+  }
+  &__list {
+    display: grid;
+    gap: 12px;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .with-text{
+      border-bottom: 1px solid #959595;
+      padding: 0 0 8px 0;
+      opacity: 0.7;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

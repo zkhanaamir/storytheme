@@ -1,0 +1,27 @@
+<div {{ attributes }}>
+  <div class="m-card-items__slider splide" role="group">
+    <div class="m-card-items__arrows splide__arrows">
+      {% if type != 'grid' and items|length > 4  %}
+        <button tabindex="-1" aria-label="{{ 'Previous slide'|t }}" class="m-card-items__arrow m-card-items__arrow--prev splide__arrow splide__arrow--prev">
+          <svg class="m-card-items__arrow-icon" aria-hidden="true">
+            <use xlink:href="{{ weblite_base_themeSvgSpritePath }}#svg-arrow-left"></use>
+          </svg>
+        </button>
+        <button tabindex="-1" aria-label="{{ 'Next slide'|t }}" class="m-card-items__arrow m-card-items__arrow--next splide__arrow splide__arrow--next">
+          <svg class="m-card-items__arrow-icon" aria-hidden="true">
+            <use xlink:href="{{ weblite_base_themeSvgSpritePath }}#svg-arrow-right"></use>
+          </svg>
+        </button>
+      {% endif %}
+    </div>
+    <div class="m-card-items__track splide__track">
+      <ul class="splide__list m-card-items__items">
+        {% for item in items %}
+          <li class="m-card-items__item splide__slide">
+            {{ item.content }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

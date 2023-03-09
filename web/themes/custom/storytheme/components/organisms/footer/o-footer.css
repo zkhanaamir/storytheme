@@ -1,0 +1,170 @@
+.o-footer {
+  padding: 0 var(--layout-horizontal-gap);
+  color: var(--color-text-stroke-light);
+  background-color: #221f1f;
+
+  :focus {
+    outline: var(--outline-size) solid var(--color-text-stroke-light);
+    outline-offset: var(--outline-offset);
+  }
+
+  &__content {
+    display: grid;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 48px;
+
+    @db l {
+      padding-top: 56px;
+      padding-bottom: 37px;
+      gap: 24px;
+    }
+  }
+
+  &__first {
+    display: grid;
+    gap: 48px 30px;
+
+    @db l {
+      grid-template-columns: 360px auto;
+    }
+
+    &--two-menus {
+      @db l {
+        gap: 323px;
+      }
+    }
+
+    &--three-menus {
+      @db l {
+        gap: 64px;
+      }
+    }
+  }
+
+  &__first-end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 23px;
+
+    @db m {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @db l {
+      gap: 30px;
+    }
+    @db xsl{
+      grid-template-columns: 1fr;
+    }
+
+    &--one-menu {
+      grid-template-columns: auto;
+
+      @db l {
+        width: 165px;
+        margin-left: auto;
+      }
+    }
+
+    &--two-menus {
+      grid-template-columns: repeat(2, 1fr);
+
+      @db l {
+        gap: 127px;
+      }
+    }
+
+    &--three-menus {
+      @db m {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @db l {
+        gap: 35px;
+      }
+    }
+  }
+
+  &__menu{
+    .contact-menu{
+      display: block;
+      .m-footer-menu{
+        &__title{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__second {
+    display: grid;
+    gap: 43px 48px;
+
+    @db l {
+      grid-template-columns: auto 160px;
+      align-items: center;
+    }
+  }
+
+  &__second-start {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @db l {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+  }
+
+  &__second-end {
+    &--hidden-after-l {
+      @db l {
+        display: none;
+      }
+    }
+
+    &--visible-only-on-l {
+      display: none;
+
+      @db l {
+        display: block;
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    margin-top: 19px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px solid var(--color-text-stroke-light);
+
+    @db l {
+      width: auto;
+      margin-top: 0;
+      padding-top: 0;
+      text-align: start;
+      border-top: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    max-width: 160px;
+    margin: 0 auto;
+    text-align: center;
+    filter: brightness(0) invert(1);
+
+    @db l {
+      margin: 0;
+      text-align: end;
+    }
+  }
+}

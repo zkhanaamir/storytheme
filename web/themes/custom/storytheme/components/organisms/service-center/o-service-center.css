@@ -1,0 +1,15 @@
+.o-service-center {
+  margin: 4rem 0 0 0;
+  &__title{
+    text-align: center;
+    color: #0079c2;
+    margin-bottom: 4rem;
+    @db xsl{
+      margin-bottom: 2rem;
+    }
+  }
+  &__text-container{
+    padding: 0 var(--layout-horizontal-gap);
+    margin-bottom: 4rem;
+  }
+}

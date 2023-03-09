@@ -1,0 +1,9 @@
+<div {{ attributes }}>
+  <div class="o-key-info-with-icons-band__items">
+    {% for item in content.items %}
+      <div class="o-key-info-with-icons-band__item">
+        {{ item.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

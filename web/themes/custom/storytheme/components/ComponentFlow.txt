@@ -1,0 +1,28 @@
+First - Twig file changes
+    - Add the required dynamic markup inside {{ }} in html.twig file
+
+Second - JSON file
+    - Define data inside
+        - object
+        - array
+        - arrays inside object
+    in JSON file
+
+Third - Stories.js file - most important to show and access stories in storybook
+    - Import all the CSS, JS and files related to component in stories.js file
+    - In basicRender method 
+        - Add the condition for how to show the data
+    - In argTypes method
+        - Open argTypes object inside that define the args related to dynamic component
+    - In Template method
+        - To render the data in HTML add the dynamic rendered method name
+
+JSON format
+{
+    "name":
+    {
+        "key": "value"
+    }
+}
+
+args format

@@ -1,0 +1,14 @@
+<div {{ attributes }}>
+  {% if content.heading|render %}
+  <div class="m-products__heading-conatiner">
+    {{ content.heading }}
+  </div>
+  {% endif %}
+  <div class="o-products__content-container">
+    <ul class="o-products__items">
+      {% for item in items %}
+        <li class="o-products__item">{{ item.content }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

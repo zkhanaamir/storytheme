@@ -1,0 +1,5 @@
+@import "@splidejs/splide/dist/css/splide-core.min";
+
+.splide {
+  visibility: visible;
+}

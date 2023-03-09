@@ -1,0 +1,76 @@
+<footer {{ attributes }}>
+	<div class="o-footer__content">
+
+    {% if page.footerSocialLinks|render %}
+      <div class="o-footer__social-links">
+        {{ page.footerSocialLinks }}
+      </div>
+    {% endif %}
+    {% if page.footerBrand|render or page.footerMenuFirst|render or page.footerMenuSecond|render or page.footerMenuThird|render or page.footerMenuFourth|render %}
+			{% set menusAmount = 0 %}
+			{% set readableMenusAmount = 'no-menus' %}
+			{% if page.footerMenuFirst|render %}
+				{% set menusAmount = menusAmount + 1 %}
+			{% endif %}
+			{% if page.footerMenuSecond|render %}
+				{% set menusAmount = menusAmount + 1 %}
+			{% endif %}
+			{% if page.footerMenuThird|render %}
+				{% set menusAmount = menusAmount + 1 %}
+			{% endif %}
+			{% if page.footerMenuFourth|render %}
+				{% set menusAmount = menusAmount + 1 %}
+			{% endif %}
+			{% if menusAmount == 1 %}
+				{% set readableMenusAmount = 'one-menu' %}
+			{% endif %}
+			{% if menusAmount == 2 %}
+				{% set readableMenusAmount = 'two-menus' %}
+			{% endif %}
+			{% if menusAmount == 3 %}
+				{% set readableMenusAmount = 'three-menus' %}
+			{% endif %}
+			{% if menusAmount == 4 %}
+				{% set readableMenusAmount = 'four-menus' %}
+			{% endif %}
+			<div class="o-footer__first o-footer__first--{{ readableMenusAmount }}">
+				{% if page.footerBrand|render %}
+				  <div class="o-footer__first-start">
+					  {{ page.footerBrand }}
+				  </div>
+				{% endif %}
+				{% if page.footerMenuFirst|render or page.footerMenuSecond|render or page.footerMenuThird|render or page.footerMenuFourth|render %}
+					<div class="o-footer__first-end o-footer__first-end--{{ readableMenusAmount }}">
+						{% if page.footerMenuFirst|render %}
+							<div class="o-footer__menu">
+								{{ page.footerMenuFirst }}
+							</div>
+						{% endif %}
+						{% if page.footerMenuSecond|render %}
+							<div class="o-footer__menu">
+								{{ page.footerMenuSecond }}
+							</div>
+						{% endif %}
+						{% if page.footerMenuThird|render %}
+							<div class="o-footer__menu">
+								{{ page.footerMenuThird }}
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+
+    <div class="o-footer__second">
+      {% if page.footerCopyright|render %}
+      <div class="o-footer__second-start">
+        {% if page.footerCopyright %}
+          <div class="o-footer__copyright">
+            {{ page.footerCopyright }}
+          </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  </footer>

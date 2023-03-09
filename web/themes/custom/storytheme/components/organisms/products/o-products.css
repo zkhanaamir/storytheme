@@ -1,0 +1,23 @@
+.o-products {
+  padding: 0 var(--layout-horizontal-gap);
+  margin: 4rem 0;
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    padding: 0;
+
+    @db xsl{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title{
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #0079c2;
+  }
+}
+

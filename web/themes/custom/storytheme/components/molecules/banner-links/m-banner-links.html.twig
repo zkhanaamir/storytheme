@@ -1,0 +1,20 @@
+<div {{ attributes }}>
+  {% if content.items|render %}
+    <ul class="m-banner-links__list">
+      {% for item in content.items %}
+      <li class="m-banner-links__container">
+        <div class="m-banner-links__icon-container">
+          <svg class="m-social-links__icon" aria-hidden="true">
+            <use xlink:href="{{ storythemeSvgSpritePath }}#svg-{{ item.content }}"></use>
+          </svg>
+        </div>
+        <div class="m-banner-links__link-container">
+          <a href="#" class="m-banner-links__link">
+            {{ item.content|capitalize }}
+          </a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

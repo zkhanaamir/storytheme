@@ -1,0 +1,28 @@
+<div {{ attributes }}>
+  <div class="a-text-field__element-container">
+    {% if type == 'select' %}
+      <svg class="a-text-field__select-chevron" aria-hidden="true">
+        <use xlink:href="{{ storythemeSvgSpritePath }}#svg-expand-more"></use>
+      </svg>
+      <select {{ elementAttributes }}>
+        {% for option in selectOptions %}
+          <option value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+        {% endfor %}
+      </select>
+    {% elseif type == 'textarea' %}
+      <textarea{{ elementAttributes }}>{{ value }}</textarea>
+    {% else %}
+      <input {{ elementAttributes }}/>
+      {% if throbber %}
+        <div class="a-text-field__throbber">
+          <div class="a-text-field__throbber-circle"></div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+  {% if error %}
+    <div class="a-text-field__error">
+      {{ error }}
+    </div>
+  {% endif %}
+</div>

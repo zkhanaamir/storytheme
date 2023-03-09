@@ -1,0 +1,18 @@
+{#
+    /**
+     * @file
+     * Default theme implementation to display m-card layout.
+     *
+     * Available variables:
+     * - content: The content for this layout.
+     * - attributes: HTML attributes for the layout wrapper.
+     *
+     * @ingroup themeable
+     */
+    #}
+    {{ attach_library('storytheme/m-card') }}
+
+    {% include 'themes/custom/storytheme/components/molecules/card/m-card.html.twig' with {
+      attributes: attributes.addClass('m-card').setAttribute('data-h-entity-fake-link-container', ''),
+    } %}
+    

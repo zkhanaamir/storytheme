@@ -1,0 +1,192 @@
+.m-vedio-banner {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  /*height: 100%;*/
+  height: 400px;
+  color: var(--color-text-stroke-light);
+
+  &::before {
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+    content: "";
+    transition: opacity var(--transition-duration-0-35) var(--transition-timing-function-cubic-bezier);
+    pointer-events: none;
+    background-color: var(--color-gradient-transparent-dark-layer);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    transition: opacity var(--transition-duration-0-35) var(--transition-timing-function-cubic-bezier);
+    pointer-events: none;
+    opacity: 0;
+    background-image: var(--color-gradient-transparent-fading-lines);
+  }
+
+  /*&:hover {
+    @media (hover: hover) {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+  }*/
+
+  &__vedio-container {
+    grid-row: 1;
+    grid-column: 1;
+    background-color: var(--color-secondary-saint-gobain-blue);
+
+    video{
+      width: 100vw;
+    }
+
+    img{
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  &__content-container {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: flex-end;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: block;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: flex-end;
+    padding: 24px 24px 40px 24px;
+    gap: 4px;
+    transition: padding-top var(--transition-duration-0-35) var(--transition-timing-function-cubic-bezier);
+    text-align: center;
+
+    /*.m-card:hover & {
+      @media (hover: hover) {
+        padding-top: 0;
+      }
+    }*/
+
+    .m-card--second & {
+      padding: 32px;
+
+      /*.m-card:hover & {
+        @media (hover: hover) {
+          padding-top: 0;
+        }
+      }*/
+    }
+  }
+
+  &__title-container {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    margin-bottom: 30px;
+
+    @db l {
+      -webkit-line-clamp: 3;
+    }
+
+    /*[data-h-entity-fake-link-built] & {
+      @media (hover: none) {
+        display: block;
+      }
+    }*/
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      transition-timing-function: var(--transition-timing-function-cubic-bezier);
+      transition-duration: var(--transition-duration-0-35);
+      transition-property: opacity;
+      pointer-events: none;
+      background-image: var(--color-gradient-transparent-blurred-gradient);
+
+      /*.m-card:hover & {
+        @media (hover: hover) {
+          opacity: 0;
+        }
+      }*/
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 15px;
+  }
+
+  &__text-container {
+    position: relative;
+    display: block;
+    /*overflow: hidden;
+    max-height: 0;*/
+    transition-timing-function: var(--transition-timing-function-cubic-bezier);
+    transition-duration: var(--transition-duration-0-35);
+    transition-property: opacity, max-height;
+    /*opacity: 0;
+
+    @media (hover: none) {
+      display: none;
+    }
+
+    .m-card:hover & {
+      @media (hover: hover) {
+        max-height: 200px;
+        opacity: 1;
+      }
+    }*/
+  }
+
+  &__text-subcontainer {
+    display: grid;
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  &__subtitle-container {
+    .a-text {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      @db l {
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  &__cta {
+    --a-button-content-color: currentColor;
+    --a-button-hover-border-color: currentColor;
+    --a-button-hover-content-color: currentColor;
+    border-color: #fff;
+  }
+}

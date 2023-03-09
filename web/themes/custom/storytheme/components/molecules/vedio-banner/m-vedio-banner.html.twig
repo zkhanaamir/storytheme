@@ -1,0 +1,37 @@
+<div class="m-vedio-banner">
+  {% if content.vedio|render %}
+  <div class="m-vedio-banner__vedio-container">
+      {{ content.vedio }}
+  </div>
+  {% endif %}
+  {% if content.title|render or content.heading|render or content.subTitle|render or content.cta|render %}
+  <div class="m-vedio-banner__content">
+    {% if content.title|render %}
+    <div class="m-vedio-banner__title-container">
+      {{ content.title }}
+    </div>
+    {% endif %}
+    {% if content.heading|render %}
+    <div class="m-vedio-banner__heading-container">
+      {{ content.heading }}
+    </div>
+    {% endif %}
+    {% if content.subTitle|render or content.cta|render %}
+        <div class="m-vedio-banner__text-container">
+          <div class="m-vedio-banner__text-subcontainer">
+            {% if content.subTitle|render %}
+              <div class="m-vedio-banner__subtitle-container">
+                {{ content.subTitle }}
+              </div>
+            {% endif %}
+            {% if content.cta|render %}
+              <div class="m-vedio-banner__cta-container">
+                {{ content.cta }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+  </div>
+  {% endif %}
+</div>

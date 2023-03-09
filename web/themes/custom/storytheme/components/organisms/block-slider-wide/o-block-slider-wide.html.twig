@@ -1,0 +1,12 @@
+<div {{ attributes }}>
+  {% if content.title|render %}
+    <div class="o-block-slider-wide__title">
+      {{ content.title }}
+    </div>
+  {% endif %}
+  {% if content.content|render %}
+    <div class="o-block-slider-wide__content">
+      {{ content.content }}
+    </div>
+  {% endif %}
+</div>

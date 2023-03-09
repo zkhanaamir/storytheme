@@ -1,0 +1,50 @@
+.m-product {
+  display: grid;
+  position: relative;
+  color: #fff;
+
+  &__img-container{
+    display: grid;
+    grid-row: 1;
+    grid-column: 1;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &__content-container{
+    position: relative;
+    display: grid;
+    grid-row: 1;
+    grid-column: 1;
+    padding: 1.5rem 0 1.5rem;
+    align-self: flex-end;
+  }
+
+  &__title-container{
+    margin-bottom: 10px;
+    margin-left: 1.5rem;
+  }
+
+  &__title{
+    span{
+      color: #fbd62f;
+    }
+  }
+
+  &__cta{
+    border-radius: 0 !important;
+    background-color: #fbd62f !important;
+    margin-left: 0px !important;
+    border-left: 0 !important;
+    color: #000 !important;
+    text-transform: uppercase;
+
+    &:hover{
+      background-color: #000;
+      color: #fbd62f;
+      border-color: #fbd62f;
+    }
+  }
+}

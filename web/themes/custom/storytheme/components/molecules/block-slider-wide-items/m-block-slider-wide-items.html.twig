@@ -1,0 +1,31 @@
+<div {{ attributes }}>
+  <div class="m-block-slider-wide-items__slider splide" role="group">
+    {% if items|length > 1 %}
+      <div class="m-block-slider-wide-items__shadow m-block-slider-wide-items__shadow--first"></div>
+      <div class="m-block-slider-wide-items__shadow m-block-slider-wide-items__shadow--second"></div>
+      <div class="m-block-slider-wide-items__shadow m-block-slider-wide-items__shadow--third"></div>
+      <div class="m-block-slider-wide-items__shadow m-block-slider-wide-items__shadow--fourth"></div>
+      <div class="m-block-slider-wide-items__arrows splide__arrows">
+        <button tabindex="-1" aria-label="{{ 'Previous slide'|t }}" class="m-block-slider-wide-items__arrow m-block-slider-wide-items__arrow--prev splide__arrow splide__arrow--prev">
+          <svg class="m-block-slider-wide-items__arrow-icon" aria-hidden="true">
+            <use xlink:href="{{ weblite_base_themeSvgSpritePath }}#svg-arrow-left"></use>
+          </svg>
+        </button>
+        <button tabindex="-1" aria-label="{{ 'Next slide'|t }}" class="m-block-slider-wide-items__arrow m-block-slider-wide-items__arrow--next splide__arrow splide__arrow--next">
+          <svg class="m-block-slider-wide-items__arrow-icon" aria-hidden="true">
+            <use xlink:href="{{ weblite_base_themeSvgSpritePath }}#svg-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    {% endif %}
+    <div class="m-block-slider-wide-items__track splide__track">
+      <ul class="splide__list m-block-slider-wide-items__items">
+        {% for item in items %}
+          <li class="m-block-slider-wide-items__item splide__slide">
+            {{ item.content }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

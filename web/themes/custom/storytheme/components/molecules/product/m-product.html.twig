@@ -1,0 +1,21 @@
+<div {{ attributes }}>
+  {% if content.img|render %}
+  <div class="m-product__img-container">
+    {{ content.img }}
+  </div>
+  {% endif %}
+  {% if content.title|render or content.cta|render %}
+  <div class="m-product__content-container">
+    {% if content.title|render %}
+    <div class="m-product__title-container">
+      {{ content.title }}
+    </div>
+    {% endif %}
+    {% if content.cta|render %}
+    <div class="m-product__cta-container">
+      {{ content.cta }}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

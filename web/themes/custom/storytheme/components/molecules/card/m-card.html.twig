@@ -1,0 +1,32 @@
+<div {{ attributes }}>
+  {% if content.image|render %}
+    <div class="m-card__image-container">
+      {{ content.image }}
+    </div>
+  {% endif %}
+  {% if content.title|render or content.subTitle|render or content.cta|render %}
+    <div class="m-card__content">
+      {% if content.title|render %}
+        <div class="m-card__title-container">
+          {{ content.title }}
+        </div>
+      {% endif %}
+      {% if content.subTitle|render or content.cta|render %}
+        <div class="m-card__text-container">
+          <div class="m-card__text-subcontainer">
+            {% if content.subTitle|render %}
+              <div class="m-card__subtitle-container">
+                {{ content.subTitle }}
+              </div>
+            {% endif %}
+            {% if content.cta|render %}
+              <div class="m-card__cta-container">
+                {{ content.cta }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

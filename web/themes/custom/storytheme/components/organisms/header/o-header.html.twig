@@ -1,0 +1,38 @@
+<header {{ attributes }}>
+  <div class="o-header__content">
+    {% if page.headerLogo|render %}
+      <div class="o-header__start">
+        {{ page.headerLogo }}
+      </div>
+    {% endif %}
+    <div class="o-header__end">
+      <div class="o-header__static">
+        {% if page.headerNavigation|render %}
+          <div class="o-header__dropdown-controls">
+            <button class="o-header__iconic-button o-header__iconic-button--show" type="button" aria-expanded="false" aria-label="{{ 'Expand main navigation'|t }}">
+              <svg class="o-header__icon o-header__icon--menu" aria-hidden="true">
+                <use xlink:href="{{ storythemeSvgSpritePath }}#svg-menu"></use>
+              </svg>
+            </button>
+            <button class="o-header__iconic-button o-header__iconic-button--hide" type="button" aria-expanded="true" aria-label="{{ 'Collapse main navigation'|t }}">
+              <svg class="o-header__icon o-header__icon--close" aria-hidden="true">
+                <use xlink:href="{{ storythemeSvgSpritePath }}#svg-close"></use>
+              </svg>
+            </button>
+          </div>
+        {% endif %}
+      </div>
+      {% if page.headerNavigation|render %}
+        <div class="o-header__dropdown">
+          {% if page.headerNavigation|render %}
+            <div class="o-header__navigation">
+              {{ page.headerNavigation }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+<div class="o-header-shadow"></div>
+<div class="o-header-overlay"></div>

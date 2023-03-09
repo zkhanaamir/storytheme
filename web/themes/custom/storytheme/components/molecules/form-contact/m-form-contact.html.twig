@@ -1,0 +1,18 @@
+<form {{ attributes }}>
+  <div class="m-form-contact__top">
+    {% for field in content.top %}
+      {{ field }}
+    {% endfor %}
+  </div>
+  <div class="m-form-contact__middle">
+    {% for field in content.middle %}
+      {{ field }}
+    {% endfor %}
+  </div>
+  <div class="m-form-contact__action">
+    {{ content.action }}
+  </div>
+  <div class="m-form-contact__caption">
+    {{ content.caption }}
+  </div>
+</form>

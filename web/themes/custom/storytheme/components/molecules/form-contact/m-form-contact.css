@@ -1,0 +1,36 @@
+.m-form-contact {
+  &__top {
+    display: grid;
+    gap: 12px 16px;
+    align-items: flex-start;
+
+    @db m {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__middle {
+    display: grid;
+    gap: 12px;
+
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  &__caption {
+    &:not(:first-child) {
+      margin-top: 28px;
+
+      @db m {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__action {
+    &:not(:first-child) {
+      margin-top: 28px;
+    }
+  }
+}

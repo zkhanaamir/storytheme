@@ -1,0 +1,21 @@
+.o-block-slider-wide {
+  display: grid;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 32px;
+
+  @db l {
+    gap: 40px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  &__title {
+    padding: 0 var(--layout-horizontal-gap);
+    color: var(--color-text-stroke-primary);
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+}

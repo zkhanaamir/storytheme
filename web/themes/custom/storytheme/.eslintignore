@@ -1,0 +1,4 @@
+/dist/**/*.js
+/color/*.js
+postcss.config.js
+*.stories.js

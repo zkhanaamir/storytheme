@@ -1,0 +1,18 @@
+<div {{ attributes }}>
+  <div class="o-cards__header">
+    {% if content.title|render %}
+      <div class="o-cards__title">{{ content.title }}</div>
+    {% endif %}
+    {% if content.text|render %}
+      <div class="o-cards__text">{{ content.text }}</div>
+    {% endif %}
+    {% if content.cta|render %}
+      <div class="o-cards__cta">{{ content.cta }}</div>
+    {% endif %}
+  </div>
+  {% if content.content|render %}
+    <div class="o-cards__content">
+      {{ content.content }}
+    </div>
+  {% endif %}
+</div>

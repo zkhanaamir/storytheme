@@ -1,0 +1,26 @@
+html {
+  font-size: var(--root-font-size-xs);
+  scroll-padding-top: calc(var(--o-header-height) - 1px);
+
+  @media only screen and (min-width: 481px) {
+    font-size: var(--root-font-size-default);
+  }
+
+  @media only screen and (min-width: 1025px) {
+    font-size: var(--root-font-size-l);
+  }
+}
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    letter-spacing: var(--letter-spacing-0-03);
+    color: var(--color-text-stroke-secondary);
+    background-color: var(--color-background-primary);
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+    line-height: var(--line-height-1-71);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+  }

@@ -1,0 +1,26 @@
+.m-logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+
+    .m-logo__link:not(:last-child) & {
+      width: 76px;
+
+      @db l {
+        width: 92px;
+      }
+    }
+
+    .m-logo__link:last-child & {
+      width: 130px;
+    }
+  }
+
+
+}

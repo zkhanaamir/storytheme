@@ -1,0 +1,16 @@
+<details {{ attributes }}>
+  <summary class="m-services__summary">
+    <span class="m-services__summary-span">
+      <svg class="m-services__icon m-services__icon--add" aria-hidden="true">
+        <use xlink:href="{{ storythemeSvgSpritePath }}#svg-add"></use>
+      </svg>
+      <svg class="m-services__icon m-services__icon--remove" aria-hidden="true">
+        <use xlink:href="{{ storythemeSvgSpritePath }}#svg-remove"></use>
+      </svg>
+      {{ title }}
+    </span>
+  </summary>
+  <div class="m-services__content">
+    {{ children }}
+  </div>
+</details>

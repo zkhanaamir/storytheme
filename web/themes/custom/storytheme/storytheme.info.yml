@@ -1,0 +1,23 @@
+name: Storytheme
+type: theme
+base theme: false
+description: storybook basic theme
+core_version_requirement: ^8.7.7 || ^9 || ^10
+
+libraries:
+  - storytheme/base
+
+components:
+  storybook: components
+
+regions:
+  headerLogo: 'Header logo'
+  headerNavigation: 'Header main navigation'
+  content: 'Main content'
+  footerSocialLinks: 'Footer social links'
+  footerBrand: 'Footer brand'
+  footerMenuFirst: 'Footer first navigation'
+  footerMenuSecond: 'Footer second navigation'
+  footerMenuThird: 'Footer third navigation'
+  footerMenuFourth: 'Footer fourth navigation'
+  footerCopyright: 'Footer copyright'
